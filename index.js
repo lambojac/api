@@ -9,7 +9,7 @@ const app=express()
 dotenv.config()
 const connect=async()=>{
     try{
-        await mongoose.connect('mongodb+srv://kennie:869480Ak@cluster0.zkjbfkp.mongodb.net/pevents?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://kennie:869480Ak@cluster0.zkjbfkp.mongodb.net/booking?retryWrites=true&w=majority')
         console.log("connected to database")
     }catch(error){
         throw error;
