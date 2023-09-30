@@ -10,16 +10,16 @@ dotenv.config()
 const connect=async()=>{
     try{
         await mongoose.connect('mongodb+srv://kennie:869480Ak@cluster0.zkjbfkp.mongodb.net/pevents?retryWrites=true&w=majority')
-        
+        console.log("connected to database")
     }catch(error){
         throw error;
     }
 }
-
+app.use(express.json())
 app.use("/api/auth",authRoute)
-app.use("/api/auth",usersRoute)
-app.use("/api/auth",hotelsRoute)
-app.use("/api/auth",roomsRoute)
+app.use("/api/users",usersRoute)
+app.use("/api/hotels",hotelsRoute)
+app.use("/api/rooms",roomsRoute)
 
 app.listen(8000,()=>{
     connect()

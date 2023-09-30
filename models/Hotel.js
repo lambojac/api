@@ -23,6 +23,9 @@ required:true,
    photos:{
     type:String,
    },
+   title:{
+    type:String,
+   },
    desc:{
 type:String,
 required:true
@@ -46,5 +49,4 @@ required:true
    }
 })
 
-const Hotel= mongoose.model("Hotel",HotelSchema)
-export default Hotel
+export default mongoose.model("Hotel",HotelSchema)
