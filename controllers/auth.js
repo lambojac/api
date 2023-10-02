@@ -15,7 +15,7 @@ const newUser=new User({
     password:hash
 })
 await newUser.save()
-res.status(201).send("user has been created")
+res.status(201).send("user has been created successfully")
     }catch(err){
         next(err)
     }
